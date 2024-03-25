@@ -1,5 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
+using Assignment_3.Data;
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<WebTechnologiesContext>(options =>
+    options.UseSqlServer("Data Source=web_technologies.db"));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
