@@ -55,38 +55,55 @@ namespace Assignment_3.Data
             return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
-        // PUT: api/Users/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+
+
+
+        // PUT: Users/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPut]
+        public async Task<IActionResult> Update(int id, [Bind("UserId,Email,Password,Username,PurchaseHistory,ShippingAddress,CreatedAt,UpdatedAt")] User user)
         {
             if (id != user.UserId)
             {
-                return BadRequest();
+                return BadRequest("User ID in the URL does not match the User ID in the request body.");
             }
 
-            _context.Entry(user).State = EntityState.Modified;
-
-            try
+            if (ModelState.IsValid)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(id))
+                try
                 {
-                    return NotFound();
+                    _context.Update(user);
+                    await _context.SaveChangesAsync();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!UserExists(user.UserId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
+                return Json(user); // Returning JSON of the updated user
             }
-
-            return NoContent();
+            return BadRequest(ModelState);
         }
 
+     
+
+
+
+
+
+
+
+
+
         // DELETE: api/Users/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -98,7 +115,7 @@ namespace Assignment_3.Data
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new { message = "User deleted successfully.", userId = id });
         }
 
 
