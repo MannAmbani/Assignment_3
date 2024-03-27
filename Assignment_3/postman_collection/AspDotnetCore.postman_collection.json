@@ -1,0 +1,862 @@
+{
+	"info": {
+		"_postman_id": "b3c9bdcf-45d2-4460-88f1-bfdc4636149e",
+		"name": "AspDotnetCore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33003039"
+	},
+	"item": [
+		{
+			"name": "PostUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Email",
+							"value": "testrrrrrrrrrrrttttttttttt@test.com",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "testtttttttttttt",
+							"type": "text"
+						},
+						{
+							"key": "PurchaseHistory",
+							"value": "abcrrrrrr",
+							"type": "text"
+						},
+						{
+							"key": "ShippingAddress",
+							"value": "abc test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Users/PostUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Users",
+						"PostUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Users/GetUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Users",
+						"GetUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Users/GetUser/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Users",
+						"GetUser",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "UserId",
+						"value": "6",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "UserID",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "mann Ambani",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "mannAmbani",
+							"type": "text"
+						},
+						{
+							"key": "Username",
+							"value": "mann",
+							"type": "text"
+						},
+						{
+							"key": "PurchaseHistory",
+							"value": "klan",
+							"type": "text"
+						},
+						{
+							"key": "ShippingAddress",
+							"value": "akak",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Users/Update/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Users",
+						"Update",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUsers",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Users/DeleteUser/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Users",
+						"DeleteUser",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Products/GetProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Products",
+						"GetProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Products/GetProduct/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Products",
+						"GetProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ProductName",
+							"value": "fenil",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "khushbu",
+							"type": "text"
+						},
+						{
+							"key": "Image",
+							"value": "pragnesh",
+							"type": "text"
+						},
+						{
+							"key": "Pricing",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "ShippingCost",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Products/PostProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Products",
+						"PostProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ProductId",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "ProductName",
+							"value": "mann",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "ambani",
+							"type": "text"
+						},
+						{
+							"key": "Image",
+							"value": "dont have 1",
+							"type": "text"
+						},
+						{
+							"key": "Pricing",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "ShippingCost",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Products/Update/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Products",
+						"Update",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Products/DeleteProduct/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Products",
+						"DeleteProduct",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCarts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Carts/GetCarts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Carts",
+						"GetCarts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCart/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Carts/GetCart/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Carts",
+						"GetCart",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ProductId",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "UserId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "Quantities",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Carts/PostCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Carts",
+						"PostCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CartId",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "ProductId",
+							"value": "57",
+							"type": "text"
+						},
+						{
+							"key": "UserId",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "Quantities",
+							"value": "2000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Carts/Update/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Carts",
+						"Update",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Carts/DeleteCart/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Carts",
+						"DeleteCart",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Orders/GetOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Orders",
+						"GetOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ProductId",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "Quantity",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "TotalCost",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "ShippingAddress",
+							"value": "sadasd",
+							"type": "text"
+						},
+						{
+							"key": "PaymentMethod",
+							"value": "card",
+							"type": "text"
+						},
+						{
+							"key": "Status",
+							"value": "status",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Orders/PostOrder/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Orders",
+						"PostOrder",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrder/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Orders/GetOrder/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Orders",
+						"GetOrder",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateOrder",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "OrderId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "ProductId",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "Quantity",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "TotalCost",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "ShippingAddress",
+							"value": "asdasd",
+							"type": "text"
+						},
+						{
+							"key": "PaymentMethod",
+							"value": "cash",
+							"type": "text"
+						},
+						{
+							"key": "Status",
+							"value": "paid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Orders/Update/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Orders",
+						"Update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Orders/DeleteOrder/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Orders",
+						"DeleteOrder",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Comments/GetComments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Comments",
+						"GetComments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComment/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Comments/GetComment/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Comments",
+						"GetComment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ProductId",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "UserId",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "Rating",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "Images",
+							"value": "abcs",
+							"type": "text"
+						},
+						{
+							"key": "CommentText",
+							"value": "abcasdnjnsakjnfasad",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Comments/PostComment/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Comments",
+						"PostComment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateComment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CommentId",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "ProductId",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "UserId",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "Rating",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "Images",
+							"value": "asdfasas",
+							"type": "text"
+						},
+						{
+							"key": "CommentText",
+							"value": "asdfasfsdfadsfadsfasdfasdf",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5172/Comments/Update/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Comments",
+						"Update",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5172/Comments/DeleteComment/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5172",
+					"path": [
+						"Comments",
+						"DeleteComment",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
